@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="ProgressBarVG">
+        <attr name="alpha_animation" format="boolean"/>
+    </declare-styleable>
+</resources>
