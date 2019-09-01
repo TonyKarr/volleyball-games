@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".presentation.fragment.SignupFragment">
+
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/logo"
+        android:padding="@dimen/logoPadding"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineCenter"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iconAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etUserName"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/etUserName"
+        tools:ignore="ContentDescription" />
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:hint="@string/username"
+        android:textColorHint="@color/whiteAlpha25"
+        android:textColor="@color/secondaryTextColor"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iconAccount"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintBottom_toTopOf="@id/etBithday"
+        app:layout_constraintTop_toBottomOf="@id/guidelineCenter"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <ImageView
+        android:id="@+id/iconBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_date_range_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etBithday"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/etBithday"
+        tools:ignore="ContentDescription" />
+    <EditText
+        android:id="@+id/etBithday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:ems="10"
+        android:inputType="datetime"
+        android:padding="16dp"
+        android:hint="@string/birthday"
+        android:textColorHint="@color/whiteAlpha25"
+        android:textColor="@color/secondaryTextColor"
+        app:layout_constraintStart_toEndOf="@+id/iconBirthday"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@id/etUserName"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <ImageView
+        android:id="@+id/iconKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vpn_key_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/etPassword"
+        tools:ignore="ContentDescription" />
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/whiteAlpha25"
+        android:textColor="@color/secondaryTextColor"
+        app:layout_constraintStart_toEndOf="@+id/iconKey"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@id/etBithday"
+        app:layout_constraintBottom_toTopOf="@id/etPasswordRepeat"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <ImageView
+        android:id="@+id/iconKeyRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vpn_key_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etPasswordRepeat"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/etPasswordRepeat"
+        tools:ignore="ContentDescription" />
+    <EditText
+        android:id="@+id/etPasswordRepeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:hint="@string/password_repeat"
+        android:textColorHint="@color/whiteAlpha25"
+        android:textColor="@color/secondaryTextColor"
+        app:layout_constraintStart_toEndOf="@+id/iconKeyRepeat"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintBottom_toTopOf="@id/btnRegistration"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/btnRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
