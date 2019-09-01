@@ -1,15 +1,10 @@
 package com.tony.smit.core.entities.statistics
 
 import com.tony.smit.core.entities.GameType
+import com.tony.smit.core.entities.Player
 
-/**
- *
- * This code is created by Kovaliov Anton on 2019-08-03.
- *
- */
 data class PlayerSkillLevel(
-    val id: Long,
-    val playerId: Long,
+    val player: Player,
     val gameType: GameType,
     val skillLevel: Int
 ) {

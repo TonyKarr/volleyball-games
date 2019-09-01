@@ -8,10 +8,9 @@ import java.util.*
  *
  */
 data class Game(
-    val id: Long,
     val gameIdentification: Long,
-    val organizationId: Long,
-    val placeId: Long,
+    val organization: Player,
+    val place: Place,
     val gameType: GameType,
     val dateStart: Date,
     val dateEnd: Date,

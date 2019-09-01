@@ -1,11 +1,9 @@
 package com.tony.smit.core.entities
 
-/**
- *
- * This code is created by Kovaliov Anton on 2019-08-03.
- *
- */
+import android.content.res.Resources
+import com.tony.smit.core.R
+
 enum class GameType(val gameTypeName: String) {
-    VOLLEYBALL("Классический волейбол"),
-    BEACHVOLLEYBALL("Пляжный волейбол")
+    VOLLEYBALL(Resources.getSystem().getString(R.string.classic_volleyball)),
+    BEACHVOLLEYBALL(Resources.getSystem().getString(R.string.beach_volleyball))
 }
