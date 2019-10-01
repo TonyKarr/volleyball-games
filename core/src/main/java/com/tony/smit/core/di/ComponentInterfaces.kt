@@ -15,5 +15,4 @@ interface MainToolsProvider {
 
 interface PresentationProvider {
     fun provideShowAuthAction(): ShowAuthAction
-    fun provideShowSignupAction(): ShowSignupAction
 }

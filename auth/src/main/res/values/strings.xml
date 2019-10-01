@@ -1,9 +1,5 @@
 <resources>
-    <string name="dont_have_account">Еще нет аккаунта?</string>
-    <string name="sign_up">Регистрация</string>
-    <string name="password">Пароль</string>
-    <string name="username">Логин</string>
     <string name="enter">Вход</string>
-    <string name="password_repeat">Повторите пароль</string>
-    <string name="birthday">Дата рождения</string>
+    <string name="or_auth_with_social_network">Или подключитель с помощью аккаунта социальной сети</string>
+    <string name="phone_example">+7 (921) 1234-56-78</string>
 </resources>

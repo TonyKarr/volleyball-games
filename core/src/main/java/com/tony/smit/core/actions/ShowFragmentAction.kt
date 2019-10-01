@@ -7,4 +7,3 @@ interface ShowFragmentAction{
 }
 
 interface ShowAuthAction: ShowFragmentAction
-interface ShowSignupAction: ShowFragmentAction

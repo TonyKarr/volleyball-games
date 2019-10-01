@@ -24,7 +24,7 @@ class ProgressBarVG(context: Context, attrs: AttributeSet) : View(context, attrs
     private lateinit var animationRotate: ValueAnimator
     private lateinit var animationAlpha: ValueAnimator
 
-    private val colorFirst = resources.getColor(R.color.primaryDarkColorAlpha, null)
+    private val colorFirst = resources.getColor(R.color.primaryColor, null)
     private val colorSecond = resources.getColor(R.color.primaryColorAlpha, null)
     private val colorThird = resources.getColor(R.color.primaryLightColorAlpha, null)
 

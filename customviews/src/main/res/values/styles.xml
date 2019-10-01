@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="VGWidget" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="VGWidget" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
@@ -12,13 +12,11 @@
     <style name="VGWidget.Button" parent="android:Widget.Material.Button.Borderless">
         <item name="android:background">@drawable/btn_background</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/secondaryTextColor</item>
-        <item name="android:focusable">true</item>
-        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
     </style>
     <style name="VGWidget.EditText" parent="android:Widget.Material.EditText">
-        <item name="android:textColorHint">@color/whiteAlpha75</item>
+        <item name="android:textColorHint">@color/secondaryColor</item>
         <item name="android:textColor">@color/secondaryTextColor</item>
-        <item name="android:backgroundTint">@color/secondaryTextColor</item>
+        <item name="android:backgroundTint">@color/secondaryDarkColor</item>
     </style>
 </resources>

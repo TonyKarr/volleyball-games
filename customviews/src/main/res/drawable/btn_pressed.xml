@@ -3,7 +3,7 @@
     <corners
         android:radius="@dimen/cornerRadiusBackground"/>
     <solid
-        android:color="@color/whiteAlpha75"/>
+        android:color="@color/primaryDarkColor"/>
     <size android:width="@dimen/manage_view_width"
         android:height="@dimen/manage_view_height"/>
 </shape>
