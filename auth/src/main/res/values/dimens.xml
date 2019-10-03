@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logoPadding">16dp</dimen>
+    <dimen name="auth_icon_margin">12dp</dimen>
+</resources>

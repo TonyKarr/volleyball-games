@@ -1,1 +1,1 @@
-include ':main', ':customviews'
+include ':main', ':customviews', ':core', ':auth'

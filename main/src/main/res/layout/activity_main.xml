@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.tony.smit.customviews.ProgressBarVG
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:alpha_animation="true"
-        app:layout_constraintStart_toStartOf="parent"
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.tony.smit.auth.presentation.fragment.AuthFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
