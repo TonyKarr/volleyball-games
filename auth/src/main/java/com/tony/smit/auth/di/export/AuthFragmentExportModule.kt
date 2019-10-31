@@ -1,4 +1,4 @@
-package com.tony.smit.auth.di
+package com.tony.smit.auth.di.export
 
 import com.tony.smit.auth.actions.*
 import com.tony.smit.core.actions.ShowAuthAction

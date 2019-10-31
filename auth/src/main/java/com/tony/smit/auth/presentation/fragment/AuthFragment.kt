@@ -1,34 +1,25 @@
 package com.tony.smit.auth.presentation.fragment
 
-import androidx.lifecycle.ViewModelProviders
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.tony.smit.auth.R
+import com.tony.smit.auth.di.AuthFragmentComponent
+import com.tony.smit.auth.presentation.utils.ViewModelFactory
 import com.tony.smit.auth.presentation.viewmodel.AuthViewModel
+import com.tony.smit.core.di.ApplicationProvider
+import com.tony.smit.fragment_view.presentation.fragments.BaseFragment
 
-
-class AuthFragment : Fragment() {
+class AuthFragment : BaseFragment<AuthViewModel, ViewModelFactory>() {
 
     companion object {
         fun newInstance() = AuthFragment()
     }
 
-    private lateinit var viewModel: AuthViewModel
+    override val viewModelClazz = AuthViewModel::class.java
+    override val resourceInt = R.layout.authorization_fragment
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.authorization_fragment, container, false)
+    override fun inject(applicationProvider: ApplicationProvider) {
+        AuthFragmentComponent
+            .Initializer
+            .init(applicationProvider)
+            .inject(this)
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
 }
