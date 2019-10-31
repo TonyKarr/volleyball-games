@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Volleyball Games</string>
     <string name="classic_volleyball">Классический волейбол</string>
     <string name="beach_volleyball">Пляжный волейбол</string>
     <string name="setter">Связующий</string>

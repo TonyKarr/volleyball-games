@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Volleyball Games</string>
     <string name="classic_volleyball">Volleyball</string>
     <string name="beach_volleyball">Beach volleyball</string>
+    <string name="setter">Setter</string>
+    <string name="middle_blocker">Middle Blocker</string>
+    <string name="hitter">Hitter</string>
+    <string name="lybero">Lybero</string>
+    <string name="diagonal">Diagonal</string>
+    <string name="universal">Universal</string>
 </resources>
