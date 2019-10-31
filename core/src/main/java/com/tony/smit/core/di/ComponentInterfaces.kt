@@ -6,14 +6,14 @@ import com.tony.smit.core.tools.ILogger
 
 interface ApplicationProvider :
     MainToolsProvider,
-    PresentationProvider
+    AuthorizationProvider
 
 interface MainToolsProvider {
     fun provideContext(): App
     fun provideLogger(): ILogger
 }
 
-interface PresentationProvider {
+interface AuthorizationProvider {
     fun provideShowAuthAction(): ShowAuthAction
     fun provideShowSignupAction(): ShowSignupAction
 }

@@ -1,17 +1,17 @@
-package com.tony.smit.auth.di
+package com.tony.smit.auth.di.export
 
+import com.tony.smit.core.di.AuthorizationProvider
 import com.tony.smit.core.di.MainToolsProvider
-import com.tony.smit.core.di.PresentationProvider
 import dagger.Component
 
 
 @Component(dependencies = [MainToolsProvider::class],
     modules = [AuthFragmentExportModule::class])
-interface AuthFragmentExportComponent: PresentationProvider {
+interface AuthFragmentExportComponent: AuthorizationProvider {
 
     class Initializer private constructor(){
         companion object{
-            fun init(mainToolsProvider: MainToolsProvider): PresentationProvider =
+            fun init(mainToolsProvider: MainToolsProvider): AuthorizationProvider =
                 DaggerAuthFragmentExportComponent
                     .builder()
                     .mainToolsProvider(mainToolsProvider)

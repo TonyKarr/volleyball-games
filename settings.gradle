@@ -1,1 +1,1 @@
-include ':main', ':customviews', ':core', ':auth', ':core_ui'
+include ':main', ':customviews', ':core', ':auth', ':core_ui',':base:fragment_view'
