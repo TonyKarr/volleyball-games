@@ -6,7 +6,12 @@ import com.tony.smit.core.tools.ILogger
 
 interface ApplicationProvider :
     MainToolsProvider,
-    AuthorizationProvider
+    AuthorizationProvider,
+    GamesListFragmentProvider
+
+interface GamesListFragmentProvider {
+    fun provideShowGamesListFragmentAction(): ShowGamesListFragmentAction
+}
 
 interface MainToolsProvider {
     fun provideContext(): App

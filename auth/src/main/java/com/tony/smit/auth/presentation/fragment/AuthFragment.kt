@@ -14,7 +14,7 @@ class AuthFragment : BaseFragment<AuthViewModel, ViewModelFactory>() {
     }
 
     override val viewModelClazz = AuthViewModel::class.java
-    override val resourceInt = R.layout.authorization_fragment
+    override val layoutResourceInt = R.layout.fragment_auth
 
     override fun inject(applicationProvider: ApplicationProvider) {
         AuthFragmentComponent

@@ -14,7 +14,7 @@ class SignupFragment : BaseFragment<SignupViewModel, ViewModelFactory>() {
     }
 
     override val viewModelClazz = SignupViewModel::class.java
-    override val resourceInt = R.layout.signup_fragment
+    override val layoutResourceInt = R.layout.fragment_signin
 
     override fun inject(applicationProvider: ApplicationProvider) {
         AuthFragmentComponent
