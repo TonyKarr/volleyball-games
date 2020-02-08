@@ -2,15 +2,15 @@ package com.tony.smit.volleyballgames.di
 
 import com.tony.smit.auth.di.export.AuthFragmentExportComponent
 import com.tony.smit.core.App
-import com.tony.smit.core.di.ApplicationProvider
-import com.tony.smit.core.di.MainToolsProvider
-import com.tony.smit.core.di.AuthorizationProvider
+import com.tony.smit.core.di.*
+import com.tony.smit.games_list.di.export.GamesListFragmentExportComponent
 import dagger.Component
 
 @Component(
     dependencies = [
         MainToolsProvider::class,
-        AuthorizationProvider::class]
+        AuthorizationProvider::class,
+        GamesListFragmentProvider::class]
 )
 interface AppComponent : ApplicationProvider {
 
@@ -23,9 +23,12 @@ interface AppComponent : ApplicationProvider {
                     .init(app)
                 val authorizationProvider = AuthFragmentExportComponent.Initializer
                     .init(mainToolsProvider)
+                val gamesListFragmentProvider = GamesListFragmentExportComponent.Initializer
+                    .init(mainToolsProvider)
                 return DaggerAppComponent.builder()
                     .mainToolsProvider(mainToolsProvider)
                     .authorizationProvider(authorizationProvider)
+                    .gamesListFragmentProvider(gamesListFragmentProvider)
                     .build()
             }
         }

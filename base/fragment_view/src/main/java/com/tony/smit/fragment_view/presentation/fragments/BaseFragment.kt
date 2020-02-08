@@ -1,7 +1,6 @@
 package com.tony.smit.fragment_view.presentation.fragments
 
 import android.content.Context
-import android.os.BaseBundle
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +12,6 @@ import androidx.lifecycle.ViewModelProviders
 import com.tony.smit.core.App
 import com.tony.smit.core.di.ApplicationProvider
 import javax.inject.Inject
-import kotlin.reflect.KClass
 
 abstract class BaseFragment<
         V : ViewModel,
@@ -24,9 +22,9 @@ abstract class BaseFragment<
 
     abstract val viewModelClazz: Class<V>
 
-    abstract val resourceInt: Int
+    abstract val layoutResourceInt: Int
 
-    private val viewModel: V by lazy {
+    protected val viewModel: V by lazy {
         ViewModelProviders.of(this, viewModelFactory).get(viewModelClazz)
     }
 
@@ -36,7 +34,7 @@ abstract class BaseFragment<
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(resourceInt, container, false)
+        return inflater.inflate(layoutResourceInt, container, false)
     }
 
 

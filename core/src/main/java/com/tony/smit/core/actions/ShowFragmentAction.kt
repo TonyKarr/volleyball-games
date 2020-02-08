@@ -8,3 +8,4 @@ interface ShowFragmentAction{
 
 interface ShowAuthAction: ShowFragmentAction
 interface ShowSignupAction: ShowFragmentAction
+interface ShowGamesListFragmentAction: ShowFragmentAction
