@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import com.tony.smit.core.App
 import com.tony.smit.core.di.ApplicationProvider
 import javax.inject.Inject
@@ -25,7 +24,7 @@ abstract class BaseFragment<
     abstract val layoutResourceInt: Int
 
     protected val viewModel: V by lazy {
-        ViewModelProviders.of(this, viewModelFactory).get(viewModelClazz)
+        ViewModelProvider(this, viewModelFactory).get(viewModelClazz)
     }
 
 

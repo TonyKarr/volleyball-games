@@ -13,7 +13,6 @@ import github.nisrulz.recyclerviewhelper.RVHViewHolder
 import java.util.*
 
 
-
 class GameListAdapter(val list: LinkedList<GameViewData> = LinkedList()) :
     RecyclerView.Adapter<GameListAdapter.ItemViewHolder>(), RVHAdapter {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -43,7 +42,8 @@ class GameListAdapter(val list: LinkedList<GameViewData> = LinkedList()) :
         return false
     }
 
-    fun update(data: List<GameViewData>){
+
+    fun update(data: List<GameViewData>) {
         list.clear()
         list.addAll(data)
         notifyDataSetChanged()

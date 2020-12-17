@@ -3,4 +3,11 @@
     <dimen name="btn_corner_radius_background">14dp</dimen>
     <dimen name="btn_custom_background_width">270dp</dimen>
     <dimen name="btn_custom_background_height">60dp</dimen>
+    <dimen name="top_layout_margin">16dp</dimen>
+    <dimen name="list_cardview_elevation">2dp</dimen>
+    <dimen name="list_cardview_margin">8dp</dimen>
+    <dimen name="list_cardview_corner_radius">16dp</dimen>
+    <dimen name="bottom_navigation_elevation">4dp</dimen>
+    <dimen name="cardview_margin">16dp</dimen>
+    <dimen name="icon_small_padding">4dp</dimen>
 </resources>

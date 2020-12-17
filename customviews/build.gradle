@@ -28,5 +28,4 @@ android {
 dependencies {
     implementation project(':core')
     implementation project(':core_ui')
-    implementation 'androidx.core:core-ktx:1.0.2'
 }

@@ -28,8 +28,9 @@ dependencies {
     implementation project(':customviews')
     implementation project(':core')
     implementation project(':core_ui')
-    implementation project(':base:fragment_view')
+    api project(':base:fragment_view')
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 

@@ -18,6 +18,7 @@ import github.nisrulz.recyclerviewhelper.RVHItemDividerDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import github.nisrulz.recyclerviewhelper.RVHItemTouchHelperCallback
 import android.util.Log
+import androidx.fragment.app.Fragment
 import com.tony.smit.games_list.presentation.adapters.GameListAdapter
 import github.nisrulz.recyclerviewhelper.RVHAdapter
 import kotlinx.android.synthetic.main.fragment_games_list.*
@@ -40,24 +41,16 @@ class GamesListFragment : BaseFragment<GamesListViewModel, ViewModelFactory>() {
         binding?.viewModel = viewModel
         // Setup onItemTouchHandler to enable drag and drop , swipe left or right
         val callback = RVHItemTouchHelperCallback(
-            viewModel.adapter.get(), true, true,
-            true
+            viewModel.adapter.get(), false, false,
+            false
         )
         val helper = ItemTouchHelper(callback)
         helper.attachToRecyclerView(rvGameList)
 
-        // Set the divider in the recyclerview
-        rvGameList.addItemDecoration(
-            RVHItemDividerDecoration(
-                requireContext(),
-                LinearLayoutManager.VERTICAL
-            )
-        )
-
         // Set On Click Listener
         rvGameList.addOnItemTouchListener(
             RVHItemClickListener(requireContext(),
-                RVHItemClickListener.OnItemClickListener { view, position ->
+                RVHItemClickListener.OnItemClickListener { _, position ->
                     val value = "Clicked Item at " + position
 
                     Log.d("TAG", value)

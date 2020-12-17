@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Volleyball Games</string>
-    <string name="classic_volleyball">Классический волейбол</string>
-    <string name="beach_volleyball">Пляжный волейбол</string>
-    <string name="setter">Связующий</string>
-    <string name="middle_blocker">Центральный блокирующий</string>
-    <string name="hitter">Доигровщик</string>
-    <string name="lybero">Либеро</string>
-    <string name="diagonal">Диагональный</string>
-    <string name="universal">Универсал</string>
+    <string name="activity_main_bottom_navigation_screen_game_create">Создать</string>
+    <string name="activity_main_bottom_navigation_screen_game_list">Список</string>
+    <string name="activity_main_bottom_navigation_screen_game_favourite">Закладки</string>
 </resources>

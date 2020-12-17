@@ -1,22 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <variable
             name="gameView"
             type="com.tony.smit.games_list.domain.entities.GameViewData" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@{gameView.name}"
-            android:textSize="30sp" />
-    </LinearLayout>
+            android:layout_margin="@dimen/cardview_margin"
+            android:backgroundTint="@color/primaryLightColor"
+            app:cardCornerRadius="@dimen/list_cardview_corner_radius"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/list_cardview_margin">
+
+                <ImageView
+                    android:id="@+id/imgFadeIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_round_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/list_cardview_margin"
+                    android:paddingBottom="@dimen/list_cardview_margin"
+                    android:text="Игра на бухарестской"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/imgFadeIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintBottom_toTopOf="@+id/imgGroup"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDate"
+                    app:layout_constraintStart_toEndOf="@id/imgFadeIcon"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    app:srcCompat="@drawable/ic_date_range_black_24dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="10.02"
+                    android:textColor="@color/secondaryColor"
+                    app:layout_constraintBottom_toBottomOf="@id/imgDate"
+                    app:layout_constraintEnd_toStartOf="@+id/imgTime"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@id/imgDate"
+                    app:layout_constraintTop_toTopOf="@id/imgDate" />
+
+
+                <ImageView
+                    android:id="@+id/imgTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/tvTime"
+                    app:layout_constraintStart_toEndOf="@id/tvDate"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    app:srcCompat="@drawable/ic_access_time_white_24dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="20:00-22:00"
+                    android:textColor="@color/secondaryColor"
+                    app:layout_constraintBottom_toBottomOf="@id/imgTime"
+                    app:layout_constraintStart_toEndOf="@+id/imgTime"
+                    app:layout_constraintTop_toTopOf="@id/imgTime" />
+
+                <ImageView
+                    android:id="@+id/imgGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgDate"
+                    app:layout_constraintStart_toEndOf="@+id/imgDate"
+                    app:layout_constraintTop_toBottomOf="@+id/imgDate"
+                    app:srcCompat="@drawable/ic_group_white_24dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvPlayerCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="8/12"
+                    android:textColor="@color/secondaryColor"
+                    app:layout_constraintBottom_toBottomOf="@id/imgGroup"
+                    app:layout_constraintStart_toEndOf="@+id/imgGroup"
+                    app:layout_constraintTop_toTopOf="@+id/imgGroup" />
+
+                <ImageView
+                    android:id="@+id/imgCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/tvCash"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_attach_money_white_24dp"
+                    tools:ignore="ContentDescription" />
+
+
+                <TextView
+                    android:id="@+id/tvCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300"
+                    android:textColor="@color/secondaryColor"
+                    app:layout_constraintBottom_toBottomOf="@id/imgCash"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgCash" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
