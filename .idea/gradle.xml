@@ -16,6 +16,8 @@
             <option value="$PROJECT_DIR$/customviews" />
             <option value="$PROJECT_DIR$/games_list" />
             <option value="$PROJECT_DIR$/main" />
+            
+            
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
