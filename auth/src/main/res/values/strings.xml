@@ -1,0 +1,9 @@
+<resources>
+    <string name="dont_have_account">Еще нет аккаунта?</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="password">Пароль</string>
+    <string name="username">Логин</string>
+    <string name="enter">Вход</string>
+    <string name="password_repeat">Повторите пароль</string>
+    <string name="birthday">Дата рождения</string>
+</resources>

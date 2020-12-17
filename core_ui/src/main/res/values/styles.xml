@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="VGWidget" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryDarkColor</item>
+        <item name="buttonStyle">@style/VGWidget.Button</item>
+        <item name="editTextStyle">@style/VGWidget.EditText</item>
+    </style>
+
+    <style name="VGWidget.Button" parent="android:Widget.Material.Button.Borderless">
+        <item name="android:background">@drawable/btn_background</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="VGWidget.EditText" parent="android:Widget.Material.EditText">
+        <item name="android:textColorHint">@color/whiteAlpha75</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:backgroundTint">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="VGWidget.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/primaryDarkColor</item>
+        <item name="android:textColor">@color/secondaryColor</item>
+        <item name="android:typeface">sans</item>
+    </style>
+</resources>

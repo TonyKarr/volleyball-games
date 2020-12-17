@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "638138745767",
+    "firebase_url": "https://volleyball-games.firebaseio.com",
+    "project_id": "volleyball-games",
+    "storage_bucket": "volleyball-games.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638138745767:android:88dfb535fe3f42d3",
+        "android_client_info": {
+          "package_name": "com.tony.smit.volleyballgames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638138745767-6jva96ai2u5nv9mm2abvud7h7hg91s1c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tony.smit.volleyballgames",
+            "certificate_hash": "d4d907923b066b417e1ba8ed99b4c3bb3bd671e0"
+          }
+        },
+        {
+          "client_id": "638138745767-fs5pv0p4ef5vp8vnouecv6pcjdo6mejc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWBpG5VRcjv6KVg2ZtWsK5mVWKMB8st5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638138745767-fs5pv0p4ef5vp8vnouecv6pcjdo6mejc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

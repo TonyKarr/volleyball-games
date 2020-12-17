@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activity_main_bottom_navigation_screen_game_create">Создать</string>
+    <string name="activity_main_bottom_navigation_screen_game_list">Список</string>
+    <string name="activity_main_bottom_navigation_screen_game_favourite">Закладки</string>
+</resources>
